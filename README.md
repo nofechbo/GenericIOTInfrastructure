@@ -1,6 +1,6 @@
 # Generic IoT Infrastructure
 
-⚠️ Note: This project is a learning project, developed as part of a course. Many implementation choices were made for educational purposes and may not follow best practices in real-world software development.
+> ⚠️ **Note:** This project is a **learning project**, developed as part of a course. Many implementation choices were made for educational purposes and may not follow best practices in real-world software development.
 
 This project is a demonstration of an IoT management system designed for companies. It provides a scalable and concurrent solution for registering, managing, and collecting data from IoT devices efficiently. With this system, companies can onboard their devices and define flexible, device-specific APIs tailored to their operational needs.
 
