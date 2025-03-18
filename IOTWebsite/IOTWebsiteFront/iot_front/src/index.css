@@ -1,0 +1,225 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom, #003366, #0066cc);
+  color: white;
+  padding: 20px;
+}
+
+.tuna {
+  position: absolute;
+  font-size: 80px;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+.tuna-image {
+  width: 400px;
+  height: auto;
+  cursor: pointer;
+}
+
+@keyframes swim-left {
+  0% { left: -50px; top: 50%; transform: rotate(0deg); }
+  25% { left: 20vw; top: 40%; transform: rotate(10deg); }
+  50% { left: 50vw; top: 60%; transform: rotate(-10deg); }
+  75% { left: 80vw; top: 50%; transform: rotate(5deg); }
+  100% { left: 100vw; top: 30%; transform: rotate(0deg); }
+}
+
+@keyframes swim-right {
+  0% { left: 100vw; top: 70%; transform: rotate(0deg); }
+  25% { left: 80vw; top: 50%; transform: rotate(-15deg); }
+  50% { left: 50vw; top: 30%; transform: rotate(10deg); }
+  75% { left: 20vw; top: 40%; transform: rotate(-5deg); }
+  100% { left: -50px; top: 60%; transform: rotate(0deg); }
+}
+
+@keyframes swim-diagonal {
+  0% { left: -50px; top: 100vh; transform: rotate(0deg); }
+  25% { left: 20vw; top: 75vh; transform: rotate(-15deg); }
+  50% { left: 50vw; top: 50vh; transform: rotate(10deg); }
+  75% { left: 80vw; top: 25vh; transform: rotate(-5deg); }
+  100% { left: 100vw; top: 0vh; transform: rotate(0deg); }
+}
+
+@keyframes swim-bottom {
+  0% { left: 50vw; top: -50px; transform: rotate(0deg); }
+  25% { left: 70vw; top: 20vh; transform: rotate(10deg); }
+  50% { left: 50vw; top: 50vh; transform: rotate(-10deg); }
+  75% { left: 30vw; top: 80vh; transform: rotate(5deg); }
+  100% { left: 50vw; top: 100vh; transform: rotate(0deg); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+h2 {
+  font-size: 36px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.main-title {
+  font-size: 48px;
+  font-weight: bold;
+  text-shadow: 4px 4px 6px black;
+  color: white;
+}
+
+.section-title {
+  font-size: 36px;
+  text-shadow: 2px 2px 4px black;
+}
+
+.styled-text {
+  font-size: 42px;
+  font-weight: bold;
+  text-shadow: 3px 3px 5px black;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+form button {
+  background-color: #0066cc;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #004c99;
+}
+
+/* ✅ Make the modal wider */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  width: 400px; /* ✅ Increased width */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 1000;
+}
+
+/* ✅ Improve visibility of modal title */
+.modal h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; /* Darker text for contrast */
+  text-shadow: none; /* Remove unnecessary shadows */
+  margin-bottom: 20px;
+}
+
+/* ✅ Ensure input fields are displayed properly */
+.modal input {
+  display: block;
+  width: 100%; /* Full width */
+  margin: 10px 0;
+  padding: 12px; /* Increased padding */
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Prevent overflow issues */
+}
+
+/* ✅ Make buttons look consistent and more readable */
+.modal button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+/* ✅ Style login button */
+.modal button:first-of-type {
+  background-color: #007bff;
+  color: white;
+}
+
+/* ✅ Style close button */
+.close-btn {
+  background-color: red;
+  color: white;
+  margin-left: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.close-btn {
+  background-color: red;
+  color: white;
+}
+
+/* ✅ Style for button container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+  margin-bottom: 20px; /* Space between buttons and Tuna image */
+}
+
+/* ✅ Make buttons bigger */
+.large-btn {
+  padding: 15px 30px;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+/* ✅ Bigger dropdown */
+.dropdown {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 14px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.view-credentials-btn {
+  font-size: 14px;
+  padding: 6px 12px;
+  background-color: #777; /* Lighter color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px; /* Push it down */
+  width: auto; /* Let it shrink naturally */
+}
+
+.view-credentials-btn:hover {
+  background-color: #555; /* Darker on hover */
+}

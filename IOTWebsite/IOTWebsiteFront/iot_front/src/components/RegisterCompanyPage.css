@@ -1,0 +1,382 @@
+/* Center everything */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #003366, #00509e);
+}
+
+/* Card-style form */
+.register-card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 400px;
+}
+
+/* Form elements */
+.register-card h2 {
+  margin-bottom: 20px;
+  color: #003366;
+  font-size: 50px;
+}
+
+.register-card input,
+.register-card select,
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Register button */
+.register-btn {
+  width: 100%;
+  background-color: #00509e;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.register-btn:hover {
+  background-color: #003366;
+}
+
+/* Success Modal */
+/* Success Modal - Balanced Size */
+.success-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.success-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  width: 380px !important; /* Increased from 320px */
+  max-width: 90% !important; /* Allow some responsiveness */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+}
+
+.success-modal .success-content {
+  /* Target specifically the success modal content */
+  transform: none;
+  position: relative;
+  left: auto;
+  top: auto;
+}
+
+.success-content h2 {
+  color: #003366;
+  font-size: 32px; 
+  margin-bottom: 40px !important;
+  margin-top: 10px;
+}
+
+.success-content p {
+  margin: 15px 0; 
+  color: #070606 !important;
+  font-size: 24px !important;
+  text-align: center !important; 
+}
+
+.success-content button {
+  width: 100%;
+  padding: 12px; /* Increased from 10px */
+  margin-top: 12px; /* Increased from 8px */
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+/* First button: Register a Product */
+.success-content button:first-of-type {
+  background-color: #00509e;
+  color: white;
+}
+
+/* Second button: Return to Home Page */
+.success-content button:last-of-type {
+  background-color: #ff3333;
+  color: white;
+}
+
+.success-content button:hover {
+  opacity: 0.8;
+}
+
+.error-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 320px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.error-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.error-content h2 {
+  color: #d9534f;
+}
+
+.error-content p {
+  margin: 10px 0;
+  color: black;
+}
+
+.error-content button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+  display: block;
+  background-color: #d9534f;
+  color: white;
+}
+
+.error-content button:hover {
+  opacity: 0.8;
+}
+
+.duplicate-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.duplicate-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 320px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.duplicate-content h2 {
+  color: #d9534f;
+}
+
+.duplicate-content p {
+  margin: 10px 0;
+  color: black;
+}
+
+.duplicate-content button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+  display: block;
+  background-color: #d9534f; 
+  color: white;
+}
+
+.duplicate-content button.close-btn {
+  background-color: #6c757d; 
+  margin-top: 10px;
+}
+
+.duplicate-content button:hover {
+  opacity: 0.8;
+}
+
+.duplicate-content button:last-of-type {
+  margin-top: 10px;
+  background-color: #6c757d; /* A gray color for the secondary button */
+}
+
+/* Modal Styles for Product Registration */
+.product-modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1100;
+}
+
+.product-modal-content h2 {
+  color: #003366;
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.product-modal-content input,
+.product-modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: #fff;
+}
+
+.product-modal-content textarea:focus,
+.product-modal-content input:focus {
+  border-color: #00509e;
+  outline: none;
+  box-shadow: 0 0 3px rgba(0, 80, 158, 0.3);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050; 
+}
+
+.modal-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 400px;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+.modal-content form {
+  width: 100%;
+}
+
+.modal-content textarea {
+  resize: vertical;
+}
+
+.modal-content p {
+  text-align: right;
+  color: #666;
+  font-size: 14px;
+  margin: 0 0 10px 0;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.confirm-btn {
+  background-color: #00509e;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  flex: 1;
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.cancel-btn {
+  background-color: whitesmoke;
+  color: #495057;
+  border: 1px solid #121313;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  flex: 1;
+  font-weight: 650;
+}
+
+
+.confirm-btn:hover {
+  background-color: #003366;
+}
+
+.cancel-btn:hover {
+  background-color: #e9ecef;
+  border-color: #adb5bd;
+}
+
+
+.product-modal-content p {
+  text-align: right;
+  color: #6c757d;
+  font-size: 14px;
+  margin: 0 0 10px 0;
+}

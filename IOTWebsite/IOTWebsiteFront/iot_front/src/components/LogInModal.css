@@ -1,0 +1,62 @@
+/* ✅ Dark semi-transparent background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* ✅ Centered pop-up box */
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ✅ Input styling */
+.modal input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* ✅ Log In button */
+.modal button {
+  display: block;
+  width: 100%;
+}
+
+/* ✅ Close button */
+.close-btn {
+  background-color: red;
+  color: white;
+  margin-top: 10px;
+  height: 45px;
+  width: 100% !important; /* Force width to be 100% */
+  margin-left: 0 !important; /* Ensure no left margin */
+  margin-right: 0 !important; /* Ensure no right margin */
+}
+
+.modal button:hover {
+  opacity: 0.8;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
